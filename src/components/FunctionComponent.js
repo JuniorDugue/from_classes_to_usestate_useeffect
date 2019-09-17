@@ -9,6 +9,7 @@ const CounterStyled = styled.div`
 `;
 
 const FunctionComponent = () => {
+  // for the counter app
   const [count, setCount] = useState(0);
 
   const incrementCount = () => {
@@ -18,6 +19,12 @@ const FunctionComponent = () => {
   const decrementCount = () => {
     setCount(count - 1);
   };
+
+  // for the toggle light app
+  const [isOn, setIsOn] = useState(false)
+  const toggleLight = () => {
+    setIsOn(prevIsOn => !prevIsOn)
+  }
 
   return (
     <div>
@@ -30,7 +37,19 @@ const FunctionComponent = () => {
         <button onClick={decrementCount}>Subtract</button>
         <p>{count}</p>
       </CounterStyled>
-    </div>
+      <div className="toggleLight">
+        <h3>Toggle Light App</h3>
+          <div
+            style={{
+              height: "50px",
+              width: "50px",
+              background: isOn ? "yellow" : "grey",
+              margin: "0 auto"
+            }}
+            onClick={toggleLight}
+            />
+          </div>
+      </div>
   );
 };
 

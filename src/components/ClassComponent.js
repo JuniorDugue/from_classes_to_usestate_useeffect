@@ -28,8 +28,8 @@ class ClassComponent extends Component {
   toggleLight = () => {
     this.setState(prevState => ({
       isOn: !prevState.isOn
-    }))
-  }
+    }));
+  };
 
   render() {
     return (
@@ -43,16 +43,18 @@ class ClassComponent extends Component {
           <button onClick={this.decrementCount}>Subtract</button>
           <p>{this.state.count}</p>
         </CounterStyled>
-        <h3>Toggle Light</h3>
-        <div
-        style={{
-          height: "50px",
-          width: "50px",
-         background: this.state.isOn ? "yellow" :"grey",
-         margin: "0 auto",
-        }}
-        onClick={this.toggleLight}
-        ></div>
+        <div className="toggleLight">
+          <h3>Toggle Light App</h3>
+          <div
+            style={{
+              height: "50px",
+              width: "50px",
+              background: this.state.isOn ? "yellow" : "grey",
+              margin: "0 auto"
+            }}
+            onClick={this.toggleLight}
+          />
+        </div>
       </div>
     );
   }

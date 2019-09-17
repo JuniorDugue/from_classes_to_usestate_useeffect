@@ -2,3 +2,10 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.toggleLight{
+  border: 1px solid green;
+  width: 90%;
+  max-width: 200px;
+  margin: 0 auto;
+}
