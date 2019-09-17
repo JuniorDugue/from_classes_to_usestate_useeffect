@@ -49,6 +49,23 @@ const FunctionComponent = () => {
             onClick={toggleLight}
             />
           </div>
+          <div className="toggleLight">
+          <h3>Toggle Light App</h3>
+          <img
+            src={
+              isOn
+                ? "https://icon.now.sh/highlight/fd0"
+                : "https://icon.now.sh/highlight/aaa"
+            }
+            style={{
+              height: "50px",
+              width: "50px",
+              margin: "0 auto"
+            }}
+            alt="FlashLight"
+            onClick={toggleLight}
+          />
+        </div>
       </div>
   );
 };

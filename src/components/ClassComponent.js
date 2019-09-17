@@ -55,6 +55,23 @@ class ClassComponent extends Component {
             onClick={this.toggleLight}
           />
         </div>
+        <div className="toggleLight">
+          <h3>Toggle Light App</h3>
+          <img
+            src={
+              this.isOn
+                ? "https://icon.now.sh/hightlight/fd0"
+                : "https://icon.now.sh/hightlight/aaa"
+            }
+            style={{
+              height: "50px",
+              width: "50px",
+              margin: "0 auto"
+            }}
+            alt="FlashLight"
+            onClick={this.toggleLight}
+          />
+        </div>
       </div>
     );
   }
